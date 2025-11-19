@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description"
+        content="Portfolio of a Senior Developer & UX Architect specializing in modern web experiences.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">SHIVANSH TRIPATHI</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Extra-curricular</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="bento-grid">
+        <!-- Hero Section (Large Card) -->
+        <section class="card hero-card" id="home">
+            <div class="hero-content">
+                <h1>SHIVANSH TRIPATHI <br>SOFTWARE ENGINEER</h1>
+                <p>Architecting scalable backends, distributed systems, and AI-driven applications.</p>
+            </div>
+            <div class="hero-decoration">
+                <!-- Geometric shapes or 3D elements here -->
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </section>
+
+        <!-- About Me (Medium Card) -->
+        <section class="card about-card" id="about">
+            <div class="profile-image-container">
+                <img src="assets/pfp.png" alt="Profile" class="profile-image-circle">
+            </div>
+            <div class="about-content">
+                <h2>ABOUT ME</h2>
+                <p>Final-year B.Tech student at VIT with a geeky passion for how software works under the hood.
+                    Transforming complex problems into robust code—from embedded IoT systems to cloud-native
+                    microservices.</p>
+            </div>
+        </section>
+
+        <!-- Skills (Small Card) -->
+        <section class="card skills-card">
+            <h3>SKILLS</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-code"></i> PROGRAMMING</h4>
+                    <p><strong>Proficient:</strong> C++, Python, SQL, TypeScript</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-server"></i> SYSTEMS & TOOLS</h4>
+                    <p>Unix/Linux, Docker, Kubernetes, Git, AWS, TCP/IP, Redis, MongoDB</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fa-solid fa-microchip"></i> TECHNOLOGIES</h4>
+                    <p>Machine Learning, NLP, Information Retrieval, Distributed Systems, RESTful APIs, WebSockets</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fa-brands fa-react"></i> FRAMEWORKS</h4>
+                    <p>React, Next.js, Node.js, Flask, Express, Django, Socket.IO, Redux</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience (Medium Card) -->
+        <section class="card experience-card">
+            <h3>LATEST EXPERIENCE</h3>
+            <ul class="experience-list">
+                <li>
+                    <div class="exp-header">
+                        <span class="year">Dec 2024 – Feb 2025</span>
+                        <span class="location">Remote</span>
+                    </div>
+                    <strong class="role">Full-Stack Software Engineer Freelance</strong>
+                    <span class="company">Idezign Studio</span>
+                    <ul class="exp-details">
+                        <li>Designed and deployed scalable RESTful API with Node.js, Express, and MongoDB, implementing
+                            JWT authentication and bcrypt encryption for 500+ concurrent users.</li>
+                        <li>Architected component-based ReactJS frontend with responsive design patterns, reducing page
+                            load time by 40% through code optimization.</li>
+                        <li>Built production-ready RAG chatbot leveraging Mistral 7B LLM, FAISS vector database, and
+                            LangChain framework for NLP and personalized user support.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Stats Row (GitHub + LeetCode) -->
+        <section class="stats-container">
+            <!-- GitHub Card -->
+            <div class="card stat-card github-card">
+                <div class="stat-header">
+                    <i class="fa-brands fa-github stat-icon"></i>
+                    <h3>GITHUB</h3>
+                </div>
+                <div class="stat-content">
+                    <p>Check out my open source contributions and projects.</p>
+                    <a href="https://github.com/ShivanshTripathi247" target="_blank" class="stat-link">View Profile <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- LeetCode Card -->
+            <div class="card stat-card leetcode-card">
+                <div class="lc-header">
+                    <i class="fa-solid fa-code stat-icon"></i>
+                    <div class="lc-info">
+                        <h3>LeetCode</h3>
+                        <span class="lc-lang">Preferred: C++</span>
+                    </div>
+                </div>
+                <div class="lc-stats">
+                    <div class="lc-stat">
+                        <span class="lc-val">320+</span>
+                        <span class="lc-label">Solved</span>
+                    </div>
+                    <div class="lc-stat">
+                        <span class="lc-val">1526</span>
+                        <span class="lc-label">Rating</span>
+                    </div>
+                </div>
+                <div class="lc-difficulty">
+                    <span class="diff hard">Hard: 41</span>
+                    <span class="diff medium">Med: 183</span>
+                    <span class="diff easy">Easy: 96</span>
+                </div>
+                <a href="https://leetcode.com/u/ShivanshTripathi/" target="_blank" class="stat-link mt-auto">View
+                    Profile <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Project Heading -->
+        <div class="project-heading" id="projects">
+            <h2>FEATURED PROJECTS</h2>
+            <div class="heading-line"></div>
+        </div>
+        <!-- Projects (Individual Cards) -->
+        <!-- Project 1 -->
+        <section class="card project-card p1">
+            <div class="project-thumb">
+                <img src="./assets/unwind.png" class="thumb-placeholder tp2" alt="">
+            </div>
+            <div class="project-info">
+                <h4>Unwind Mental Health Tracker</h4>
+                <p class="project-desc">Engineered full-stack distributed system for AI-powered mental health monitoring
+                    with emotion detection.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ShivanshTripathi247/unwind" title="View Code"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://unwind-delta.vercel.app/" title="Live Demo"><i
+                            class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Project 2 -->
+        <section class="card project-card p2">
+            <div class="project-thumb">
+                <img src="./assets/otto.png" class="thumb-placeholder tp2" alt="">
+            </div>
+            <div class="project-info">
+                <h4>Otto AI Desktop Assistant</h4>
+                <p class="project-desc">Developed an AI-powered desktop assistant using Local LLM and Ollama to create
+                    my own Jarvis-like experience.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ShivanshTripathi247/Otto" title="View Code"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/ShivanshTripathi247/Otto/releases/tag/v1.0.1" title="Live Demo"><i
+                            class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Project 3 -->
+        <section class="card project-card p3">
+            <div class="project-thumb">
+                <img src="./assets/realtime.png" class="thumb-placeholder tp3" alt="">
+            </div>
+            <div class="project-info">
+                <h4>Real-time AI Health Monitoring System</h4>
+                <p class="project-desc">Built a real-time health monitoring system using Raspberry Pi and Iot Sensors
+                    coupled AI/ML.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ShivanshTripathi247/Health_MonitoringAI" title="View Code"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7396549564213747714/"
+                        title="Live Demo"><i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Project 4 -->
+        <section class="card project-card p4">
+            <div class="project-thumb">
+                <img src="./assets/newslie.png" class="thumb-placeholder tp4" alt="">
+            </div>
+            <div class="project-info">
+                <h4>NewsLie</h4>
+                <p class="project-desc">News categorizer and fake news detector mobile app using NLP to define the
+                    emotion of the news topics.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ShivanshTripathi247/NewsLie" title="View Code"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/ShivanshTripathi247/NewsLie" title="Live Demo"><i
+                            class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Project 5 -->
+        <section class="card project-card p5">
+            <div class="project-thumb">
+                <img src="./assets/netflix.png" class="thumb-placeholder tp2" alt="">
+            </div>
+            <div class="project-info">
+                <h4>Netflix Content Data Analytics</h4>
+                <p class="project-desc">Interactive data visualization dashboards using matplotlib, seaborn, and plotly
+                    for temporal analysis and geographic content distribution patterns.</p>
+                <div class="project-links">
+                    <a href="https://colab.research.google.com/drive/1x1oU7grqcpy1o-u3b0JpY0aooxAHsfZC?usp=sharing"
+                        title="View Code"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://colab.research.google.com/drive/1x1oU7grqcpy1o-u3b0JpY0aooxAHsfZC?usp=sharing"
+                        title="Live Demo"><i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Project 6 -->
+        <section class="card project-card p6">
+            <div class="project-thumb">
+                <img src="./assets/stock.png" class="thumb-placeholder tp2" alt="">
+            </div>
+            <div class="project-info">
+                <h4>Stock Portfolio Analytics and Optimization</h4>
+                <p class="project-desc"> Built historical returns plots to compare baseline and optimized portfolios,
+                    and conducted sensitivity analysis across varying time periods and assets.</p>
+                <div class="project-links">
+                    <a href="https://colab.research.google.com/drive/1B31wqFjkkuGC6ZMrDrDNvJDTrCJA3YvV?usp=sharing"
+                        title="View Code"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://colab.research.google.com/drive/1B31wqFjkkuGC6ZMrDrDNvJDTrCJA3YvV?usp=sharing"
+                        title="Live Demo"><i class="fa-solid fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+        <div class="more-heading">
+            <h2>MORE ABOUT ME</h2>
+            <div class="heading-line"></div>
+        </div>
+        <!-- Personal Section (Hobbies & Goals) -->
+        <section class="card hobbies-card" id="hobbies">
+            <h3>EXTRA-CURRICULAR & HOBBIES</h3>
+            <div class="hobbies-grid">
+                <div class="hobby-item">
+                    <i class="fa-solid fa-bicycle hobby-icon"></i>
+                    <span>Long Distance Cycling</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fa-solid fa-person-running hobby-icon"></i>
+                    <span>Trail Running</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fa-solid fa-pencil hobby-icon"></i>
+                    <span>Sketching</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fa-solid fa-baseball hobby-icon"></i>
+                    <span>Cricket</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card goals-card">
+            <h3>FUTURE GOALS</h3>
+            <ul class="goals-list">
+                <li>
+                    <i class="fa-solid fa-person-swimming goal-icon"></i>
+                    <span>Compete in Iron Man 2027</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-ninja goal-icon"></i>
+                    <span>Learn JiuJitsu</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-guitar goal-icon"></i>
+                    <span>Learn Guitar</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact (Links Only) -->
+        <section class="card contact-card" id="contact">
+            <h3>CONTACT</h3>
+            <div class="contact-links">
+                <a href="https://linkedin.com" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:shivansht06@gmail.com" class="contact-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>shivansht06@gmail.com</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
