@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
+    // Typewriter effect for name
+    const nameElement = document.getElementById('name-typewriter');
+    const nameText = 'SHIVANSH TRIPATHI';
+    let charIndex = 0;
+    
+    function typeWriter() {
+        if (charIndex < nameText.length) {
+            nameElement.textContent += nameText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 100); // Adjust speed here (milliseconds per character)
+        } else {
+            // Add blinking cursor class when done
+            nameElement.classList.add('typing-complete');
+        }
+    }
+    
+    // Start typewriter effect after a brief delay
+    setTimeout(typeWriter, 500);
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

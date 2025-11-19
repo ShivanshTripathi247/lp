@@ -232,21 +232,54 @@ h4 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1rem;
     background: linear-gradient(to right, #fff, #ccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Typewriter effect */
+.typewriter {
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to right, var(--accent-secondary), #fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typewriter::after {
+    content: '_';
+    position: absolute;
+    right: -12px;
+    background: var(--accent-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blink 0.7s infinite;
+}
+
+.typewriter.typing-complete::after {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: 0.5rem;
     color: var(--text-main);
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 1rem;
     color: var(--text-muted);
     text-transform: uppercase;
@@ -256,6 +289,7 @@ h3 {
 p {
     color: var(--text-muted);
     line-height: 1.6;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
 }
 
 /* Specific Card Layouts */
@@ -374,7 +408,9 @@ p {
 
 .exp-details {
     list-style: disc;
-    margin-left: 1.2rem;
+    list-style-position: outside;
+    margin-left: 2rem;
+    padding-left: 0;
     margin-top: 0.5rem;
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -383,6 +419,8 @@ p {
 .exp-details li {
     border-bottom: none;
     padding-bottom: 0.3rem;
+    display: list-item;
+    margin-left: 0;
 }
 
 /* Stats Row (GitHub + LeetCode) */
@@ -551,9 +589,9 @@ p {
 }
 
 .project-heading h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin: 0;
-    white-space: nowrap;
+    white-space: normal;
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -569,9 +607,9 @@ p {
 }
 
 .more-heading h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin: 0;
-    white-space: nowrap;
+    white-space: normal;
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -731,6 +769,8 @@ p {
 @media (max-width: 1024px) {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin: 100px auto 40px;
+        gap: 1.2rem;
         grid-template-areas:
             "hero hero"
             "about about"
@@ -746,11 +786,41 @@ p {
             "goals goals"
             "contact contact";
     }
+
+    .glass-nav {
+        padding: 0.8rem 1.5rem;
+        width: 95%;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-heading,
+    .more-heading {
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 @media (max-width: 768px) {
     .bento-grid {
         grid-template-columns: 1fr;
+        margin: 90px auto 30px;
+        padding: 0 15px;
+        gap: 1rem;
         grid-template-areas:
             "hero"
             "about"
@@ -770,8 +840,98 @@ p {
             "contact";
     }
 
+    .glass-nav {
+        top: 10px;
+        padding: 0.7rem 1rem;
+        border-radius: 50px;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 95%;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .hero-card {
+        min-height: 280px;
+        text-align: center;
+    }
+
+    .profile-image-container {
+        width: 120px;
+        height: 120px;
+    }
+
     .stats-container {
         grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1.2rem;
+    }
+
+    .lc-stats {
+        gap: 1.5rem;
+    }
+
+    .project-thumb {
+        height: 150px;
+    }
+
+    .project-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .hobby-item {
+        padding: 0.8rem;
+    }
+
+    .hobby-icon {
+        font-size: 1.5rem;
+    }
+
+    .hobby-item span {
+        font-size: 0.85rem;
+    }
+
+    .goals-list {
+        gap: 0.8rem;
+    }
+
+    .goals-list li {
+        padding: 0.8rem;
+    }
+
+    .goal-icon {
+        font-size: 1.2rem;
+    }
+
+    .contact-card {
+        padding: 2rem 1.5rem;
     }
 
     .contact-links {
@@ -783,5 +943,129 @@ p {
     .contact-link {
         width: 100%;
         justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .project-heading,
+    .more-heading {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp-details {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-nav {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .logo {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+        gap: 0.7rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+        border-radius: 16px;
+    }
+
+    .hero-card {
+        min-height: 250px;
+    }
+
+    .profile-image-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .skill-category h4 {
+        font-size: 0.85rem;
+    }
+
+    .skill-category p {
+        font-size: 0.8rem;
+    }
+
+    .stat-header h3,
+    .lc-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+
+    .lc-header .stat-icon {
+        font-size: 2rem;
+    }
+
+    .lc-val {
+        font-size: 1.3rem;
+    }
+
+    .lc-difficulty {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .diff {
+        font-size: 0.75rem;
+    }
+
+    .project-thumb {
+        height: 130px;
+    }
+
+    .project-info h4 {
+        font-size: 1rem;
+    }
+
+    .project-desc {
+        font-size: 0.8rem;
+    }
+
+    .project-links a {
+        font-size: 1.1rem;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-link {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-link i {
+        font-size: 1.2rem;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .role {
+        font-size: 1rem;
+    }
+
+    .company {
+        font-size: 0.85rem;
     }
 }
